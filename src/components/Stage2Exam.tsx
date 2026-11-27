@@ -715,6 +715,25 @@ export const Stage2Exam: React.FC<Stage2ExamProps> = ({
                 {currentQ.type === 'pgk_kategori' && 'Tentukan pilihan Benar atau Salah untuk setiap pernyataan di bawah ini.'}
               </div>
 
+              {/* Gambar Ilustrasi Soal (jika ada) */}
+              {currentQ.imageUrl && (
+                <figure className="mb-5 rounded-2xl border border-slate-200 bg-slate-50/70 p-3 sm:p-4 overflow-hidden">
+                  <div className="flex justify-center">
+                    <img
+                      src={currentQ.imageUrl}
+                      alt={currentQ.imageCaption || currentQ.topic}
+                      referrerPolicy="no-referrer"
+                      className="max-h-72 w-auto rounded-xl object-contain shadow-xs border border-slate-200/80 bg-white"
+                    />
+                  </div>
+                  {currentQ.imageCaption && (
+                    <figcaption className="mt-2.5 text-center text-xs italic text-slate-500">
+                      {currentQ.imageCaption}
+                    </figcaption>
+                  )}
+                </figure>
+              )}
+
               {/* Teks Soal */}
               <div className="text-sm sm:text-base text-slate-900 leading-relaxed font-medium whitespace-pre-line mb-6">
                 {currentQ.text}
@@ -889,7 +908,7 @@ export const Stage2Exam: React.FC<Stage2ExamProps> = ({
           <div className="bg-white rounded-2xl p-5 shadow-xs border border-slate-200">
             <h4 className="text-xs font-bold uppercase tracking-wider text-slate-700 mb-3 flex items-center justify-between">
               <span>Nomor Soal Ujian</span>
-              <span className="text-[11px] font-normal text-slate-500">22 Butir</span>
+              <span className="text-[11px] font-normal text-slate-500">{totalQuestions} Butir</span>
             </h4>
 
             {/* Grid 22 Soal */}

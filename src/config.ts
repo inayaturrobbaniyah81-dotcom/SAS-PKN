@@ -4,14 +4,14 @@
  */
 
 export const CONFIG = {
-  SEKOLAH: "SEKOLAH DASAR",
+  SEKOLAH: "SD N 3 DANGINTUKADAYA",
   ALAMAT_SEKOLAH: "Jembrana",
   KOTA: "Jembrana",
-  KELAS: "VI",
-  MATA_PELAJARAN: "MATEMATIKA",
-  MATERI: "TKA (Tes Kemampuan Akademik)",
-  GURU: "........................................",
-  NIP_GURU: "........................................",
+  KELAS: "VI (Enam)",
+  MATA_PELAJARAN: "PKN",
+  MATERI: "Pancasila, Pengamalan Sila, Norma Hak & Kewajiban, dan Musyawarah",
+  GURU: "Inayatur Robbaniyah, S.Pd",
+  NIP_GURU: "199311282022212007",
   KEPALA_SEKOLAH: "........................................",
   NIP_KEPALA_SEKOLAH: "........................................",
   KKTP: 70,

@@ -30,16 +30,17 @@ export interface StatementItem {
 
 export type CognitiveLevel = 'L1' | 'L2' | 'L3';
 export type KurikulumElemen =
-  | 'Bilangan'
-  | 'Aljabar'
-  | 'Pengukuran'
-  | 'Geometri'
-  | 'Analisis Data dan Peluang';
+  | 'Bab 1: Belajar Pancasila dengan Menyenangkan'
+  | 'Bab 2: Mengamalkan Pancasila'
+  | 'Bab 3: Mengenal Norma, Hak, dan Kewajiban'
+  | 'Bab 4: Belajar Bermusyawarah';
 
 export interface Question {
   id: number;
   type: QuestionType;
   text: string;
+  imageUrl?: string;
+  imageCaption?: string;
   options?: OptionItem[]; // Untuk 'pg' (4 opsi) dan 'pgk' (3 opsi)
   statements?: StatementItem[]; // Untuk 'pgk_kategori' (3 pernyataan)
   correctAnswer?: string | string[]; // string untuk 'pg' (e.g. 'B'), array untuk 'pgk' (e.g. ['A', 'C'])
